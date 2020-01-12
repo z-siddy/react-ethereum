@@ -1,0 +1,36 @@
+body, html {
+  min-height: 100vh;
+}
+.App {
+  min-height: 100vh;
+}
+
+.loader{
+  width:300px;
+  height:300px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:10px 20px;
+}
+
+@keyframes load10{
+  50%{
+    transform:rotatez(180deg);
+    border-style:dashed;
+    border-color:red maroon indianred orangered;
+  }
+  100%{
+    transform:rotatez(360deg);
+  }
+}
+.loader::before{
+  content:"";
+  color:white;
+  height:50%;
+  width:50%;
+  background:transparent;
+  border-radius:50%;
+  border:20px solid red;
+  animation:load10 1s infinite;
+}
